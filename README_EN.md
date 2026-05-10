@@ -1,195 +1,263 @@
-# 斗地主游戏 (Landlord Card Game)
+# Landlord Card Game (斗地主游戏)
 
 ![License](https://img.shields.io/badge/license-LGPL%20v3-blue)
 ![Language](https://img.shields.io/badge/language-C%2B%2B-blue)
 ![Qt](https://img.shields.io/badge/Qt-5.15.2-blue)
+![Course](https://img.shields.io/badge/CUHKSZ-CSC3002-green)
 
-一款使用Qt5和C++开发的斗地主游戏，集成了基于深度强化学习的AI对手（DouZero）。这是一个完整的单机版斗地主游戏实现，支持人机对战。
+> **📚 Course Project**: This project is a group assignment for CSC3002 C/C++ Programming course at The Chinese University of Hong Kong, Shenzhen (CUHKSZ)
 
-![Game Preview](README/landlord-bk.png)
+A complete Dou Dizhu (Landlord) card game implementation developed with Qt5 and C++, featuring an AI opponent powered by DouZero deep reinforcement learning model. This is a fully-featured single-player card game with human-computer gameplay.
 
-## 🎮 功能特性
+## 🎮 Features
 
-### 核心游戏功能
-- ✅ 完整的斗地主游戏规则实现
-- ✅ 图形化用户界面
-- ✅ 人机对战
-- ✅ 游戏得分统计
-- ✅ 音效支持
+### Core Game Functionality
+- ✅ Complete Dou Dizhu game rules implementation
+- ✅ Graphical user interface
+- ✅ Human vs AI gameplay
+- ✅ Game score tracking and statistics
+- ✅ Sound effects support
 
-### AI功能
-- 🤖 集成DouZero深度学习模型
-- 🧠 智能出牌策略
-- 📊 多种AI难度（可扩展）
+### AI Features
+- 🤖 Integrated DouZero deep learning model
+- 🧠 Intelligent card play strategy
+- 📊 Multiple difficulty levels (extensible)
 
-### 用户界面
-- 🎨 美观的卡牌界面
-- 📱 友好的游戏操作
-- 📈 实时得分显示
-- 🎯 清晰的游戏流程提示
+### User Interface
+- 🎨 Beautiful card game interface
+- 📱 User-friendly operations
+- 📈 Real-time score display
+- 🎯 Clear game flow prompts
 
-## 🎯 游戏规则概览
+## 📚 Project Information
 
-### 基本牌型
-| 牌型 | 描述 |
-|------|------|
-| 王炸 | 大王+小王，最大的牌 |
-| 炸弹 | 四张同数值牌 |
-| 单牌 | 单张的牌 |
-| 对牌 | 数值相同的两张牌 |
-| 三张牌 | 数值相同的三张牌 |
-| 三带一 | 三张+1张单牌 |
-| 三带二 | 三张+1对牌 |
-| 顺子 | 五张或更多的连续单牌 |
-| 连对 | 三对或更多的连续对牌 |
-| 飞机 | 两个或更多的连续三张牌 |
+- **University**: The Chinese University of Hong Kong, Shenzhen (CUHKSZ)
+- **Course**: CSC3002 - C/C++ Programming
+- **Project Type**: Group Assignment
+- **Programming Language**: C++ (Qt Framework)
+- **License**: LGPL v3
 
-### 游戏角色
-- **地主**（1人）：三人下注抢地主，分数最高者为地主
-- **农民**（2人）：没有抢到地主的玩家为农民
+## 🎯 Game Rules Overview
 
-### 游戏流程
-1. 发牌：一人17张，3张做底牌
-2. 抢地主：轮流叫地主，分数分别为1分、2分、3分
-3. 出牌：地主首先出牌，然后按逆时针顺序出牌
-4. 计分：根据底分和倍数（炸弹翻倍）计算得分
+### Basic Card Types
+| Card Type | Description |
+|-----------|-------------|
+| Rocket (王炸) | Big Joker + Small Joker, highest rank |
+| Bomb (炸弹) | Four cards of the same rank |
+| Single (单牌) | Single card |
+| Pair (对牌) | Two cards of the same rank |
+| Triple (三张牌) | Three cards of the same rank |
+| Triple + 1 (三带一) | Three + 1 single |
+| Triple + 2 (三带二) | Three + 1 pair |
+| Straight (顺子) | Five or more consecutive singles (no 2s/Jokers) |
+| Straight Pair (连对) | Three or more consecutive pairs (no 2s/Jokers) |
+| Airplane (飞机) | Two or more consecutive triples (no 2s/Jokers) |
 
-详细规则请参考 [游戏规则文档](README.md)
+### Game Roles
+- **Landlord** (1 player): Highest bidder in the auction phase, plays alone
+- **Peasants** (2 players): Other players, team up to beat the landlord
 
-## 🚀 快速开始
+### Game Flow
+1. **Deal**: 17 cards per player, 3 cards in the bottom
+2. **Auction**: Players bid for the landlord role (1, 2, or 3 points)
+3. **Play**: Landlord plays first, then players take turns playing cards
+4. **Scoring**: Calculate points based on base score and multipliers (bombs double the score)
 
-### 系统要求
-- **操作系统**: Windows, Linux, macOS
-- **Qt**: 5.12 或更高版本
-- **编译器**: MinGW (Windows) / GCC (Linux) / Clang (macOS)
-- **C++ 标准**: C++11 或更高
+## 🚀 Quick Start
 
-### 快速安装
+### System Requirements
+- **Operating System**: Windows, Linux, or macOS
+- **Qt**: 5.12 or higher
+- **Compiler**: MinGW (Windows) / GCC (Linux) / Clang (macOS)
+- **C++ Standard**: C++11 or higher
 
-#### Windows
-1. 安装 [Qt Creator](https://www.qt.io/download-open-source)
-2. 打开 `Landlords.pro` 项目文件
-3. 选择编译配置（Debug 或 Release）
-4. 点击 Build > Build Project
-5. 运行游戏
+### Quick Installation
+
+#### Windows - Option 1: Pre-built Executable
+Download `Landlords.exe` from the [Releases](../../releases) page and run directly (Windows 10/11).
+
+#### Windows - Option 2: Build from Source
+1. Install [Qt Creator](https://www.qt.io/download-open-source)
+2. Open `Landlords.pro` project file
+3. Select build configuration (Debug or Release)
+4. Click Build > Build Project
+5. Run the game
 
 #### Linux/macOS
 ```bash
-# 安装 Qt（以Ubuntu为例）
+# Install Qt (Ubuntu example)
 sudo apt-get install qt5-default qt5-qmake
 
-# 编译项目
+# Build project
 cd Landlords
 qmake Landlords.pro
 make
 
-# 运行游戏
+# Run game
 ./Landlords
 ```
 
-详细编译指南请参考 [BUILD.md](BUILD.md)
+For detailed build instructions, see [BUILD.md](BUILD.md)
 
-## 🤖 AI模型使用
+## 🤖 AI Model Setup
 
-项目集成了DouZero AI模型。如要启用AI功能：
+The project integrates the DouZero AI model. To enable AI features:
 
 ```bash
-# 安装Python依赖
+# Install Python dependencies
 pip install -r requirements.txt
 
-# 确保模型文件在正确位置
-# DouZero_API-main/baselines/ 目录
+# Ensure model files are in correct location
+# Place model files in: DouZero_API-main/baselines/
 ```
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 Landlords/
-├── *.h, *.cpp          # 游戏核心代码
-├── *.ui                # Qt UI 设计文件
-├── res.qrc             # 资源文件
-├── Landlords.pro       # Qt 项目配置文件
-├── test.py             # Python测试脚本
-├── DouZero_API-main/   # AI模型库
-├── images/             # 游戏图片资源
-├── README.md           # 详细文档
-├── BUILD.md            # 编译指南
-├── CONTRIBUTING.md     # 贡献指南
-└── LICENSE             # 许可证 (LGPL v3)
+├── *.h, *.cpp              # Game core implementation
+├── *.ui                    # Qt UI design files
+├── res.qrc                 # Resource files
+├── Landlords.pro           # Qt project configuration
+├── test.py                 # Python test script
+├── DouZero_API-main/       # AI model library
+├── images/                 # Game image resources
+├── README.md               # Detailed documentation (Chinese)
+├── BUILD.md                # Build and installation guide
+├── CONTRIBUTING.md         # Contribution guidelines
+├── CODE_STYLE.md           # Code style guide
+└── LICENSE                 # License (LGPL v3)
 ```
 
-### 主要类说明
+### Main Classes
 
-| 类名 | 说明 |
-|------|------|
-| `GameControl` | 游戏主控制器 |
-| `GamePanel` | 游戏显示面板 |
-| `Card` | 卡牌类 |
-| `Player` | 玩家基类 |
-| `UserPlayer` | 用户玩家 |
-| `Robot` | AI机器人 |
-| `PlayHand` | 出牌手型 |
+| Class | Purpose |
+|-------|---------|
+| `GameControl` | Main game controller |
+| `GamePanel` | Game display panel |
+| `Card` | Card representation |
+| `Player` | Player base class |
+| `UserPlayer` | Human player |
+| `Robot` | AI player |
+| `PlayHand` | Card play hand |
 
-## 🎮 游戏操作
+## 🎮 Game Operations
 
-### 用户操作
-- **点击卡牌**: 选择/取消选择卡牌
-- **出牌按钮**: 确认出牌
-- **不出按钮**: 跳过本轮
-- **提示按钮**: 获得智能出牌建议
+### User Controls
+- **Click card**: Select/deselect card
+- **Play button**: Confirm card play
+- **Pass button**: Skip current turn
+- **Hint button**: Get AI suggestion for best play
 
-## 📊 游戏统计
+## 📊 Game Statistics
 
-游戏会自动记录：
-- 每局得分
-- 赢家统计
-- 总获胜次数
-- 游戏时间统计
+The game automatically records:
+- Score per game
+- Win/loss statistics
+- Total wins
+- Game duration statistics
 
-## 🐛 已知问题
+## 🐛 Known Issues
 
-- 某些特殊组合的牌型检测可能有边界情况
-- AI模型在特定场景下的表现可进一步优化
+- Some edge cases in card type detection may exist
+- AI model performance can be further optimized in specific scenarios
 
-欢迎提交Issue报告问题！
+We welcome bug reports via [Issues](../../issues)!
 
-## 📝 许可证
+## 💻 Technical Stack
 
-本项目采用 **LGPL v3** 许可证。详见 [LICENSE](LICENSE) 文件。
+### Frontend
+- **Framework**: Qt 5.15.2
+- **Language**: C++11
+- **UI Framework**: Qt Widgets
+- **Graphics**: Qt Graphics View
+- **Multimedia**: Qt Multimedia
 
-## 🤝 贡献
+### AI Backend
+- **Model**: DouZero (Deep Reinforcement Learning)
+- **Language**: Python
+- **Dependencies**: PyTorch, NumPy
 
-欢迎各种形式的贡献！请参考 [贡献指南](CONTRIBUTING.md)
+### Build System
+- **Qt Tools**: qmake, Qt Creator
 
-### 贡献方式
-1. Fork 本仓库
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 开启 Pull Request
+## 🔧 Development
 
-## 📞 联系我们
+### Building from Source
 
-- 提交 [Issue](../../issues) 报告问题
-- 讨论 [Discussions](../../discussions) 分享想法
+**Windows (MinGW):**
+```bash
+cd Landlords
+qmake Landlords.pro
+mingw32-make
+```
 
-## 🙏 致谢
+**Linux:**
+```bash
+cd Landlords
+qmake Landlords.pro
+make
+```
 
-- Qt 框架
-- DouZero 深度强化学习库
-- 所有贡献者
+### Code Style
+Please refer to [CODE_STYLE.md](CODE_STYLE.md) for our coding conventions.
 
-## 🗺️ 开发计划
+## 🤝 Contributing
 
-- [ ] 多人在线对战
-- [ ] 更多游戏模式
-- [ ] 移动端适配
-- [ ] 国际化支持
-- [ ] 游戏回放功能
-- [ ] 成就系统
+We welcome all kinds of contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md)
+
+### How to Contribute
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📞 Contact & Support
+
+- Submit [Issues](../../issues) to report bugs or suggest features
+- Join [Discussions](../../discussions) to share ideas
+- Check [FAQ](BUILD.md#troubleshooting) for common issues
+
+## 🙏 Acknowledgments
+
+- Qt Framework and Qt Creator community
+- DouZero project and contributors
+- CUHKSZ CSC3002 course instructors
+- All project contributors
+
+## 📚 Documentation
+
+- [中文 README](README.md) - Chinese documentation
+- [Build Guide](BUILD.md) - Detailed build instructions
+- [Code Style](CODE_STYLE.md) - C++ coding conventions
+- [Contributing Guide](CONTRIBUTING.md) - How to contribute
+- [Changelog](CHANGELOG.md) - Version history
+
+## 🗺️ Future Plans
+
+- [ ] Multiplayer online play
+- [ ] Additional game modes
+- [ ] Mobile port
+- [ ] Internationalization support
+- [ ] Game replay functionality
+- [ ] Achievement system
+- [ ] Ranking leaderboard
+
+## 📜 License
+
+This project is licensed under the **LGPL v3** License - see the [LICENSE](LICENSE) file for details.
+
+LGPL v3 License allows:
+- ✅ Commercial use
+- ✅ Modification
+- ✅ Distribution
+- ⚠️ Must disclose source and license
 
 ---
 
-**最后更新**: 2024年
+**Last Updated**: 2024
 
-如有任何问题或建议，欢迎通过 Issues 联系我们！
+**For Chinese documentation, please see [README.md](README.md)**
+
+If you have any questions or suggestions, feel free to reach out through [Issues](../../issues) or [Discussions](../../discussions)! 🎉
