@@ -24,7 +24,7 @@ jobs:
         version: ${{ matrix.qt-version }}
         host: 'windows'
         target: 'desktop'
-        arch: 'win32_mingw81'
+        arch: 'win64_mingw81'
 
     
     - name: Build
@@ -52,7 +52,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
+        sudo apt-get install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qtmultimedia5-dev
     
     - name: Build
       run: |
