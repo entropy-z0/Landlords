@@ -25,7 +25,7 @@ jobs:
         host: 'windows'
         target: 'desktop'
         arch: 'win32_mingw81'
-        modules: 'qtmultimedia'
+
     
     - name: Build
       working-directory: ${{ github.workspace }}/Landlords
@@ -53,7 +53,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y qt5-default qt5-qmake libqt5multimedia5 libqt5multimedia5-plugins build-essential
+        sudo apt-get install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
     
     - name: Build
       working-directory: ${{ github.workspace }}/Landlords
