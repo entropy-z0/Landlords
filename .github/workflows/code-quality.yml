@@ -5,7 +5,7 @@ on:
     branches: [ main, master, develop ]
   pull_request:
     branches: [ main, master, develop ]
-
+    
 jobs:
   code-analysis:
     runs-on: ubuntu-latest
@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qtmultimedia5-dev
+        sudo apt-get install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qtmultimedia5-dev cppcheck clang-format
     
     - name: Static analysis with cppcheck
       run: |
@@ -25,9 +25,8 @@ jobs:
           $(find . -name "*.cpp" -o -name "*.h" | grep -v build)
     
     - name: Code formatting check
-
       run: |
-        find . -name "*.cpp" -o -name "*.h" | grep -v build | while read file; do
+        find . \( -name "*.cpp" -o -name "*.h" \) | grep -v build | while read file; do
           clang-format -i "$file"
         done
         git diff --exit-code || exit 1
