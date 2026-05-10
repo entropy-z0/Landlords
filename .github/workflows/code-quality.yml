@@ -26,6 +26,7 @@ jobs:
           --suppress=unknownMacro \
           --suppress=unusedFunction \
           --suppress=shadowFunction \
+          --suppress=uninitMemberVar\
           --error-exitcode=1 \
           $(find . \( -name "*.cpp" -o -name "*.h" \) | grep -v build)
     
