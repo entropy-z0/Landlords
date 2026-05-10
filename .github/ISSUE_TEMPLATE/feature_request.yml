@@ -1,0 +1,41 @@
+name: Feature Request
+description: 提议新功能
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您的功能建议！请详细描述您想要的功能。
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: 功能描述
+      description: 您想要添加什么功能？
+      placeholder: 请描述所需的功能...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 动机
+      description: 为什么需要这个功能？
+      placeholder: 这个功能的使用场景是...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: solution
+    attributes:
+      label: 可能的实现方案
+      description: 您对如何实现这个功能有什么想法吗？
+      placeholder: 一些可能的实现思路...
+  
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 其他替代方案
+      description: 有其他可能的解决方案吗？
+      placeholder: 其他可能的方法...

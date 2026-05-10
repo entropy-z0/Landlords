@@ -1,0 +1,34 @@
+name: Code Quality
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  code-analysis:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cppcheck clang-format qt5-default
+    
+    - name: Static analysis with cppcheck
+      working-directory: ${{ github.workspace }}/Landlords
+      run: |
+        cppcheck --enable=all --suppress=missingIncludeSystem \
+          --error-exitcode=1 \
+          $(find . -name "*.cpp" -o -name "*.h" | grep -v build)
+    
+    - name: Code formatting check
+      working-directory: ${{ github.workspace }}/Landlords
+      run: |
+        find . -name "*.cpp" -o -name "*.h" | grep -v build | while read file; do
+          clang-format -i "$file"
+        done
+        git diff --exit-code || exit 1

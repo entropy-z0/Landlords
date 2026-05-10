@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/1fen-1.png</file>
+        <file>images/1fen-2.png</file>
+        <file>images/1fen-3.png</file>
+        <file>images/2fen-1.png</file>
+        <file>images/2fen-2.png</file>
+        <file>images/2fen-3.png</file>
+        <file>images/3fen-1.png</file>
+        <file>images/3fen-2.png</file>
+        <file>images/3fen-3.png</file>
+        <file>images/buqiang-1.png</file>
+        <file>images/buqiang-2.png</file>
+        <file>images/buqiang-3.png</file>
+        <file>images/buqinag.png</file>
+        <file>images/button_hover.png</file>
+        <file>images/button_normal.png</file>
+        <file>images/button_pressed.png</file>
+        <file>images/card.png</file>
+        <file>images/chupai_btn-1.png</file>
+        <file>images/chupai_btn-2.png</file>
+        <file>images/chupai_btn-3.png</file>
+        <file>images/farmer_fail.png</file>
+        <file>images/farmer_win.png</file>
+        <file>images/gameover.png</file>
+        <file>images/jiaodizhu.png</file>
+        <file>images/logo.ico</file>
+        <file>images/lord_fail.png</file>
+        <file>images/lord_win.png</file>
+        <file>images/pass.png</file>
+        <file>images/pass_btn-1.png</file>
+        <file>images/pass_btn-2.png</file>
+        <file>images/pass_btn-3.png</file>
+        <file>images/qiangdizhu.png</file>
+        <file>images/start-1.png</file>
+        <file>images/start-2.png</file>
+        <file>images/start-3.png</file>
+        <file>images/background.png</file>
+    </qresource>
+</RCC>

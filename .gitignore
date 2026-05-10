@@ -1,0 +1,92 @@
+# Qt-specific files
+*.pro.user
+*.pro.user.*
+*.qmlc
+*.jsc
+*.scm
+*.tm
+*.swp
+*~
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# Build directories
+build/
+release/
+debug/
+*.o
+*.obj
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.a
+*.lib
+*.lai
+*.la
+*.a
+*.lo
+
+# Qt Creator IDE files
+.qtc_clangd
+.project
+.cproject
+.settings
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# Compiler output
+*.o
+*.so
+*.a
+
+# Generated executable
+Landlords.exe
+Landlords
+*.dll

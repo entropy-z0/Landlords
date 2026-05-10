@@ -1,0 +1,73 @@
+name: Bug Report
+description: 报告游戏bug
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您报告bug！请尽可能详细地描述问题。
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug描述
+      description: 清晰简洁地描述问题
+      placeholder: 请描述您遇到的问题...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      description: 如何复现这个bug？
+      placeholder: |
+        1. 打开游戏...
+        2. 点击...
+        3. 看到...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+      description: 应该发生什么？
+      placeholder: 应该...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+      description: 实际发生了什么？
+      placeholder: 实际...
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - 其他
+    validations:
+      required: true
+  
+  - type: textarea
+    id: logs
+    attributes:
+      label: 错误日志
+      description: 如果有错误输出，请粘贴在这里
+      render: text
+  
+  - type: textarea
+    id: additional
+    attributes:
+      label: 附加信息
+      description: 其他相关信息（截图、视频等）
