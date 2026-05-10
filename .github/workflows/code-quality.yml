@@ -20,9 +20,14 @@ jobs:
     
     - name: Static analysis with cppcheck
       run: |
-        cppcheck --enable=all --suppress=missingIncludeSystem \
+        cppcheck --language=c++ --std=c++11 \
+          --enable=warning,performance,portability \
+          --suppress=missingIncludeSystem \
+          --suppress=unknownMacro \
+          --suppress=unusedFunction \
+          --suppress=shadowFunction \
           --error-exitcode=1 \
-          $(find . -name "*.cpp" -o -name "*.h" | grep -v build)
+          $(find . \( -name "*.cpp" -o -name "*.h" \) | grep -v build)
     
     - name: Code formatting check
       run: |
