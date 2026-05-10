@@ -81,6 +81,8 @@ protected:
     QString m_name;
     Role m_role;
     Type m_type;
+    Role m_role = Farmer;
+    Type m_type = UnKnow;
     bool m_isWin = false;
     Player* m_prev = nullptr;
     Player* m_next = nullptr;
