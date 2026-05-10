@@ -90,3 +90,9 @@ env/
 Landlords.exe
 Landlords
 *.dll
+
+# Temporary documentation files (cleanup)
+README_GITHUB_PREP.md
+FILES_SUMMARY.md
+QUICK_START.md
+GITHUB_UPLOAD.md
