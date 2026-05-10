@@ -28,7 +28,6 @@ jobs:
 
     
     - name: Build
-      working-directory: ${{ github.workspace }}/Landlords
       run: |
         qmake Landlords.pro
         mingw32-make
@@ -56,11 +55,9 @@ jobs:
         sudo apt-get install -y qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
     
     - name: Build
-      working-directory: ${{ github.workspace }}/Landlords
       run: |
         qmake Landlords.pro
         make
     
     - name: Test
-      working-directory: ${{ github.workspace }}/Landlords
       run: echo "Build successful"
